@@ -30,5 +30,6 @@ print(postcodes_post_response.json())
 
 results = postcodes_post_response.json()['result']
 
+# Print the NHS locations in result
 for request in results:
     print(request['result']['nhs_ha'])
