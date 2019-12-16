@@ -11,3 +11,10 @@ for both Lists (Arrays) and Dictionaries (Hash)
 
 ## Make POST Request with JSON
 
+
+
+Extra info
+JS - The only front end language that isn't a 
+mark up language (they don't compute stuff)
+
+HTML CSS JS
