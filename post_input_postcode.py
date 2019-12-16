@@ -29,8 +29,19 @@ def inputted_postcodes():
     for request in results:
         print(f"Postcode: {request['result']['postcode']} with nhs location at: {request['result']['nhs_ha']}")
 
-def get_lat_lang():
-    pass
+
+def get_lat_long():
+    postcode = input('Enter the postcode: ')
+    #make dictionary
+    dictionary_post_codes = {
+        'postcodes': [postcode]}
+    json_body = json.dumps(dictionary_post_codes)
+    lat_long_post_response = requests.post(base_url + path, data=json_body, headers=headers)
+    results = lat_long_post_response.json()['result']
+    for request in results:
+        print(f"Latitude: {request['result']['latitude']} Longitude: {request['result']['longitude']}")
+
+get_lat_long()
 
 
     # print('postcode: with nhs location at', + nhs_location)
