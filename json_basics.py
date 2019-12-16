@@ -17,7 +17,7 @@ print(type(car_data_json_string)) # Checking the different types dict and now sh
 print(car_data_json_string)
 
 # json.dump(dict_object, file) --> writes json to a file
-# The new file will be created 'new_json_file.json' (without me doing it) including the string
+# The new file will be created 'new_json_file.json' (without me manually doing it) and outputs the string
 with open('new_json_file.json', 'w') as jsonfile:
     json.dump(car_dictionary, jsonfile)
 
